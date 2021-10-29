@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual país</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro?</h1>
+    Em qual país você mora?: <input type="text" name="país" id="país">
+    <input type="button" value="enter" onclick= 'pesquisar()'>
+    <div id = 'morando'></div>
+    <div id = 'nacionalidade'></div>
+
+    <script>
+        function pesquisar() {
+            var pais = window.document.querySelector('input#país')
+            var nacionalidade = document.querySelector('div#nacionalidade')
+            morando.innerHTML = `Morando no ${pais.value}`
+            if (pais.value == 'Brasil' || pais.value == 'brasil') {
+                nacionalidade.innerHTML = 'Você é Brasileiro'   
+            } else {
+                nacionalidade.innerHTML = 'Você é estrangeiro'
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
